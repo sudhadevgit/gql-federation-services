@@ -1,0 +1,22 @@
+{
+  "name": "gql-federation-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"node account/index.js\" \"node devices/index.js\" \"node gateway/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.38.1",
+    "@apollo/gateway": "^2.10.0",
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
