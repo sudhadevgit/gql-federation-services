@@ -6,16 +6,17 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
    
 
 **Getting Started**
-    To get the project up and running on your local machine, follow these steps:
+
+        To get the project up and running on your local machine, follow these steps:
 
 1. **Prerequisites**
-        Node.js (v14 or above)
-        npm (v6 or above)
+            Node.js (v14 or above)
+            npm (v6 or above)
 
 2. **Clone the Repository**
-        clone in your local directory:
-        git clone https://github.com/sudhadevgit/gql-federation-services.git
-        cd gql-federation-services
+            clone in your local directory:
+            git clone https://github.com/sudhadevgit/gql-federation-services.git
+            cd gql-federation-services
 
 4. **Install dependencies**
         
@@ -33,55 +34,57 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
         npm install
 
 5. **Run Services**
-   Ideally all three services have to be started independently, but for development convenience for now, using concurrently script to start all three servers using
-   npm start 
+    Ideally all three services have to be started independently, but for development convenience for now, using concurrently script to start all three servers using
+        npm start 
 
    Or run services independently:
-   cd account
-    node index.js
+        cd account
+        node index.js
 
-   cd devices
-    node index.js
+        cd devices
+        node index.js
 
-    cd gateway
-    node index.js
+        cd gateway
+        node index.js
 
 6.**Access the GraphQL Playground**
    Open your browser and navigate to the Federation Service's URL:
-   http://localhost:4000
+        http://localhost:4000
 
   You can now run queries in the Apollo GraphQL Playground.
 
 Example Queries
 Get Account Details:
 
-query {
-  getAccount(id: "1234") {
-    id
-    name
-    email
-  }
-}
-Get Account and Associated Devices:
-query {
-  getAccount(id: "1234") {
-    id
-    name
-    email
-    devices {
-      id
-      name
-    }
-  }
-}
-Get Device Details:
-query {
-  getDevice(id: "5678") {
-    id
-    name
-    accountId
-  }
-}
+        query {
+        getAccount(id: "1234") {
+            id
+            name
+            email
+        }
+        }
+    Get Account and Associated Devices:
+
+        query {
+        getAccount(id: "1234") {
+            id
+            name
+            email
+            devices {
+            id
+            name
+            }
+        }
+        }
+    Get Device Details:
+
+        query {
+        getDevice(id: "5678") {
+            id
+            name
+            accountId
+        }
+        }
 
 6. **Project Structure**:   Project is structured as follows:
 gql-federation-services
