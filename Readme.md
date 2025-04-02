@@ -41,6 +41,7 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
         npm start 
 
    Or run services independently:
+   
         cd account
         node index.js
 
@@ -52,6 +53,7 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
 
 6.**Access the GraphQL Playground**
    Open your browser and navigate to the Federation Service's URL:
+
         http://localhost:4000
 
   You can now run queries in the Apollo GraphQL Playground.
