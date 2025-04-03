@@ -16,6 +16,9 @@ const gateway = new ApolloGateway({
 const server = new ApolloServer({
   gateway,
   subscriptions: false,
+  cors: {
+    origin: '*',
+  },
 });
 
 server.listen().then(({ url }) => {
