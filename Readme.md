@@ -19,21 +19,27 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
             git clone https://github.com/sudhadevgit/gql-federation-services.git
             cd gql-federation-services
 
-4. **Install dependencies**
+4. **Docker Install**
+        
+        docker-compose build
+        docker-compose up
+        
+        Check if http://localhost:4001/  is up and running
+
+4. **Manual Install**
         
         npm install 
-        (run this in gql-federation-services directory as its a simple project with services, with same dependencies)
+        (run this in gql-federation-services directory)
 
-    OR If each service has its own set of dependencies. Follow the steps below for each service:
+    OR To run each service when it has its own set of dependencies. Follow the steps below for each service:
 
-        cd account
-        npm init -y
+        cd account-service
         npm install
 
-        cd devices
+        cd devices-service
         npm install
 
-        cd gateway
+        cd gateway-service
         npm install
 
 5. **Run Services**
@@ -41,15 +47,15 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
 
         npm start 
 
-   Or to run services independently:
+        OR to run services independently:
 
-        cd account
+        cd account-service
         node index.js
 
-        cd devices
+        cd devices-service
         node index.js
 
-        cd gateway
+        cd gateway-service
         node index.js
 
 6.**Access the GraphQL Playground**
@@ -120,13 +126,13 @@ Get all Accounts with its devices:
 8. **Project Structure**:   Project is structured as follows:
 
         gql-federation-services
-        ├── account/
+        ├── account-service/
         │   ├── index.js           # Apollo Server for Account Service
         │   └── schema.js          # Account service GraphQL schema
-        ├── devices/
+        ├── devices-service/
         │   ├── index.js           # Apollo Server for Devices Service
         │   └── schema.js          # Devices service GraphQL schema
-        ├── gateway/
+        ├── gateway-service/
         │   ├── index.js           # Apollo Gateway for Federation Service
         └── README.md
    
