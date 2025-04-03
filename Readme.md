@@ -60,6 +60,16 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
   You can now run queries in the Apollo GraphQL Playground.
 
 Example Queries
+    Above project is using some static data:
+
+        Accounts = [
+        { id: '1234', name: 'Sudha Rani', email: 'sudha.rani@example.com', phone: '123-456-7890' }
+        ];
+        let devices = [
+        { id: '5678', name: "Sudha's iPhone", type: 'smartphone', status: 'active', accountId: '1234' },
+        { id: '91011', name: "Sudha's Laptop", type: 'laptop', status: 'active', accountId: '1234' }
+        ];
+
 Get Account Details:
 
         query {
