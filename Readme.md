@@ -60,28 +60,34 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
   You can now run queries in the Apollo GraphQL Playground.
 
 Example Queries
-    Above project is using some static data:
 
+        Above project is using below static data for initial fetch:
         Accounts = [
-        { id: '1234', name: 'Sudha Rani', email: 'sudha.rani@example.com', phone: '123-456-7890' }
+            { id: '1234', name: 'Sudha Rani', email: 'sudha.rani@example.com', phone: '123-456-7890' }
         ];
-        let devices = [
-        { id: '5678', name: "Sudha's iPhone", type: 'smartphone', status: 'active', accountId: '1234' },
-        { id: '91011', name: "Sudha's Laptop", type: 'laptop', status: 'active', accountId: '1234' }
+        
+        Devices = [
+            { id: '5678', name: "Sudha's iPhone", type: 'smartphone', status: 'active', accountId: '1234' },
+            { id: '91011', name: "Sudha's Laptop", type: 'laptop', status: 'active', accountId: '1234' }
         ];
 
-Get Account Details:
+Get all Accounts with its devices:
 
-        query {
-            getAccount(id: "1234") {
+        query GetAccounts {
+            getAccounts {
                 id
                 name
                 email
+                phone
+                devices {
+                    id
+                    name
+                }
             }
         }
-    Get Account and Associated Devices:
+    Get an Account and associated Devices:
 
-        query {
+        query GetAccountWithDevices {
             getAccount(id: "1234") {
                 id
                 name
@@ -94,13 +100,18 @@ Get Account Details:
         }
     Get Device Details:
 
-        query {
-            getDevice(id: "5678") {
-                id
-                name
-                accountId
+            query GetDeviceWithAccount {
+                getDevice(id: "5678") {
+                    id
+                    name
+                    type
+                    status
+                    account {
+                        id
+                        name
+                    }
+                }
             }
-        }
 
 7. **Run tests**
     
