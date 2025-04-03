@@ -23,8 +23,8 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
         
         docker-compose build
         docker-compose up
-        
-        Check if http://localhost:4001/  is up and running
+
+        Check if http://localhost:4000/  is up and running, jump to Step 7
 
 4. **Manual Install**
         
@@ -43,7 +43,7 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
         npm install
 
 5. **Run Services**
-    Ideally all three services have to be started independently, but for development convenience for now, using concurrently script to start all three servers using
+    All three services can be started independently, but for development convenience, using concurrently script to start all three servers using
 
         npm start 
 
@@ -58,7 +58,11 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
         cd gateway-service
         node index.js
 
-6.**Access the GraphQL Playground**
+6. **Run tests**
+    
+        npm test 
+
+7. **Access the GraphQL Playground**
    Open your browser and navigate to the Federation Service's URL:
 
         http://localhost:4000
@@ -118,10 +122,6 @@ Get all Accounts with its devices:
                     }
                 }
             }
-
-7. **Run tests**
-    
-        npm test 
 
 8. **Project Structure**:   Project is structured as follows:
 
