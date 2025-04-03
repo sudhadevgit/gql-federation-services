@@ -92,7 +92,11 @@ Get Account Details:
             }
         }
 
-6. **Project Structure**:   Project is structured as follows:
+7. **Run tests**
+    
+        npm test 
+
+8. **Project Structure**:   Project is structured as follows:
 
         gql-federation-services
         ├── account/

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node account/index.js\" \"node devices/index.js\" \"node gateway/index.js\""
+    "start": "concurrently \"node account/index.js\" \"node devices/index.js\" \"node gateway/index.js\"",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,9 @@
     "graphql": "^16.10.0"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "@apollo/client": "^3.13.5",
+    "concurrently": "^9.1.2",
+
+    "jest": "^29.7.0"
   }
 }
