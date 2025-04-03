@@ -1,10 +1,10 @@
 {
   "name": "gql-federation-services",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a simple GraphQL application built using Apollo Server and GraphQL Federation. It consists of three microservices:",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"node account/index.js\" \"node devices/index.js\" \"node gateway/index.js\"",
+    "start": "concurrently \"node account-service/index.js\" \"node devices-service/index.js\" \"node gateway-service/index.js\"",
     "test": "jest"
   },
   "keywords": [],
@@ -19,7 +19,6 @@
   "devDependencies": {
     "@apollo/client": "^3.13.5",
     "concurrently": "^9.1.2",
-
     "jest": "^29.7.0"
   }
 }
