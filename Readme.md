@@ -28,10 +28,11 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
 
 4. **Manual Install**
         
-        npm install 
+        **npm install**
         (run this in gql-federation-services directory)
 
-    OR To run each service when it has its own set of dependencies. Follow the steps below for each service:
+    
+    **OR** To run each service when it has its own set of dependencies. Follow the steps below for each service:
 
         cd account-service
         npm install
@@ -45,9 +46,9 @@ This is a simple GraphQL application built using Apollo Server and GraphQL Feder
 5. **Run Services**
     All three services can be started independently, but for development convenience, using concurrently script to start all three servers using
 
-        npm start 
+        **npm start**
 
-        OR to run services independently:
+        **OR** to run services independently:
 
         cd account-service
         node index.js
